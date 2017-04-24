@@ -1,0 +1,8 @@
+services:
+    auth.provider.ipboard:
+        class: theclonker\ipboardauth\auth\provider\ipboard
+        arguments:
+            - @config
+            - @dbal.conn
+        tags:
+            - { name: auth.provider }
