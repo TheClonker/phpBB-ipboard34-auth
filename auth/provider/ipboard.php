@@ -65,15 +65,6 @@ class ipboard extends \phpbb\auth\provider\base
 
     	if (!$row)
     	{
-    		if ($config['ip_login_limit_max'] && $attempts >= $config['ip_login_limit_max'])
-    		{
-    			return array(
-    				'status'		=> LOGIN_ERROR_ATTEMPTS,
-    				'error_msg'		=> 'LOGIN_ERROR_ATTEMPTS',
-    				'user_row'		=> array('user_id' => ANONYMOUS),
-    			);
-    		}
-
     		return array(
     			'status'	=> LOGIN_ERROR_USERNAME,
     			'error_msg'	=> 'LOGIN_ERROR_USERNAME',
